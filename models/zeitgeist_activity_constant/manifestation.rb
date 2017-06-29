@@ -1,0 +1,3 @@
+class Manifestation < ZeitgeistActivityConstant
+
+end

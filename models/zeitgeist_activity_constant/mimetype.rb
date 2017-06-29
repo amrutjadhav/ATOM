@@ -1,0 +1,3 @@
+class MimeType < ZeitgeistActivityConstant
+
+end

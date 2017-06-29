@@ -1,0 +1,3 @@
+class URI < ZeitgeistActivityConstant
+
+end
