@@ -1,3 +1,2 @@
-class Interpretation < ZeitgeistActivityConstant
-
+class ZeitgeistActivityConstant::Interpretation < ZeitgeistActivityConstant
 end

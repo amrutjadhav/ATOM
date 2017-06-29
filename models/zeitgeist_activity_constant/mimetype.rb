@@ -1,3 +1,2 @@
-class MimeType < ZeitgeistActivityConstant
-
+class ZeitgeistActivityConstant::MimeType < ZeitgeistActivityConstant
 end

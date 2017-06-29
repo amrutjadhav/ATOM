@@ -1,3 +1,2 @@
-class URI < ZeitgeistActivityConstant
-
+class ZeitgeistActivityConstant::Uri < ZeitgeistActivityConstant
 end
