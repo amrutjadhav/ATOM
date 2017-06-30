@@ -71,7 +71,6 @@ PLATFORMS
 DEPENDENCIES
   byebug
   neo4j
-  neo4j-core
   pry
   sqlite3
 
