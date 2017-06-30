@@ -8,23 +8,22 @@ class ActivityConstantsUploader
 
   def fetch_constant_entries
     @zeitgeist_db.execute 'select * from manifestation' do |row|
-      key, value = row.first, row.last.split('#').last
-      ZeitgeistActivityConstant::Manifestation.create(constant_id: key, name: value)
+      key, value = row[0], row[1].split('#').last
+      ZeitgeistActivityConstant::Manifestation.find_or_create_by(constant_id: key, name: value)
     end
     @zeitgeist_db.execute 'select * from interpretation' do |row|
-      key, value = row.first, row.last.split('#').last
-      ZeitgeistActivityConstant::Interpretation.create(constant_id: key, name: value)
+      key, value = row[0], row[1].split('#').last
+      ZeitgeistActivityConstant::Interpretation.find_or_create_by(constant_id: key, name: value)
     end
     @zeitgeist_db.execute 'select * from mimetype' do |row|
-      key, value = row.first, row.last
-      ZeitgeistActivityConstant::Mimetype.create(constant_id: key, name: value)
+      key, value = row[0], row[1]
+      ZeitgeistActivityConstant::MimeType.find_or_create_by(constant_id: key, name: value)
     end
     @zeitgeist_db.execute 'select * from uri' do |row|
-      key, value = row.first, row.last.split('#').last
-      ZeitgeistActivityConstant::Uri.create(constant_id: key, name: value)
+      key, value = row[0], row[1].split('#').last
+      ZeitgeistActivityConstant::Uri.find_or_create_by(constant_id: key, name: value)
     end
 
-    # constant_hash
   end
 end
 
