@@ -12,6 +12,13 @@ Bundler.require(:default)
 load File.expand_path("../models/user.rb",   __FILE__)
 load File.expand_path("../models/zeitgeist_activity_constant.rb",   __FILE__)
 Dir[File.expand_path('../models/zeitgeist_activity_constant/*.rb', __FILE__)].each { |f| load f }
-Dir[File.expand_path("../src/zeitgeist-monitor/*",   __FILE__)].each {|file| load file}
 
-ActivityConstantsUploader.new.fetch_constant_entries
+load File.expand_path("../models/activity_time.rb",   __FILE__)
+load File.expand_path("../models/activity_time/year.rb",   __FILE__)
+load File.expand_path("../models/activity_time/month.rb",   __FILE__)
+load File.expand_path("../models/activity_time/date.rb",   __FILE__)
+
+# Load src files.
+Dir[File.expand_path("../src/zeitgeist_monitor/*",   __FILE__)].each {|file| load file}
+
+# ActivityConstantsUploader.new.fetch_constant_entries
