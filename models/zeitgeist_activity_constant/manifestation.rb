@@ -1,0 +1,2 @@
+class ZeitgeistActivityConstant::Manifestation < ZeitgeistActivityConstant
+end
